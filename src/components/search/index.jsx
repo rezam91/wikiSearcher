@@ -11,7 +11,6 @@ const Search = ( {onResult} ) => {
                 return response.json()
             })
             .then((result) => {
-                console.log(result)
                 onResult(result)
             })
         console.log('here')

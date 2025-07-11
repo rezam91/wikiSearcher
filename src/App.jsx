@@ -12,7 +12,7 @@ const App = () => {
   return (
     <>
       <Search onResult={Setkeyword} />
-      <Result />
+      <Result searchedKeyword = {keyword} />
     </>
   )
 }
