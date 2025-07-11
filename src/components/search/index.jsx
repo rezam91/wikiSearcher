@@ -13,11 +13,9 @@ const Search = ( {onResult} ) => {
             .then((result) => {
                 onResult(result)
             })
-        console.log('here')
     }
     useEffect (() => {
         if (!query.length) {
-            console.log('no query')
             return
         }
         const timer = setTimeout(() => {
@@ -28,9 +26,10 @@ const Search = ( {onResult} ) => {
         }
     },[query])
     return (
-        <>
-            <input type="text" onChange={(e) => setQuery(e.target.value)} />
-        </>
+        <div className="search-box">
+            <span>Keyword: </span>
+            <input placeholder="Please insert your keyword" type="text" onChange={(e) => setQuery(e.target.value)} />
+        </div>
     )
 }
 
