@@ -26,7 +26,7 @@ const Result = ( {searchedKeyword} ) => {
                                     <td>{item.title}</td>
                                     <td>{item.wordcount}</td>
                                     <td>{(item.wordcount/200).toFixed(1)}</td>
-                                    <td><a href={`https://en.wikipedia.org/?curid=${item.pageid}`}>Visit Page!</a></td>
+                                    <td><a className='visit-link' href={`https://en.wikipedia.org/?curid=${item.pageid}`}>Visit Page!</a></td>
                                     <td><LoadPhoto pageidToPhoto={item.title} /></td>
                                 </tr>
                             ))}
