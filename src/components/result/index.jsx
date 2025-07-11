@@ -3,8 +3,8 @@ import { useState } from "react"
 const Result = ( {searchedKeyword} ) => {
     return (
         <>
-            {!!searchedKeyword && (
-                <div>
+            {!!searchedKeyword && (Object.keys(searchedKeyword.query.search).length ?
+                (<div>
                     <div>result:</div>
                     <table>
                         <thead>
@@ -14,6 +14,7 @@ const Result = ( {searchedKeyword} ) => {
                                 <th>word Count</th>
                                 <th>Time to Read (min)</th>
                                 <th>Page</th>
+                                <th>Photo</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -29,7 +30,7 @@ const Result = ( {searchedKeyword} ) => {
                         </tbody>
                     </table>
                     <div>end</div>
-                </div>
+                </div>) : <div>No Data Found!</div>
             )}
         </>
     )
