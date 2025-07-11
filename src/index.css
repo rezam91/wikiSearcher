@@ -3,8 +3,10 @@
 }
 body {
   margin: 0;
+  font-family: Ubuntu;
 }
 .container {
+  padding: 10px;
   border-radius: 20px;
   margin: 10px auto;
   background-color: #F2F4F7;
@@ -28,7 +30,13 @@ h1 {
   font-weight: 700;
   text-decoration: underline;
 }
+.top {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
 table {
+  border-radius: 12px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -39,8 +47,18 @@ table {
 table tr th {
   border-bottom: 1px solid blue;
 }
+table tbody tr td {
+  border-bottom:1px red dashed ;
+  /* background-color: aqua; */
+}
+table tbody tr td {
+  padding: 2px;
+}
 .no-result {
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+table img {
+  border-radius: 4px;
 }

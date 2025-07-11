@@ -7,6 +7,7 @@ const Result = ( {searchedKeyword} ) => {
             {!!searchedKeyword && (Object.keys(searchedKeyword.query.search).length ?
                 (<div>
                     <div className="total-result">Total Related Result: {searchedKeyword.query.searchinfo.totalhits}</div>
+                    <div className='top'>Top Related Searches:</div>
                     <table>
                         <thead>
                             <tr>
@@ -24,7 +25,7 @@ const Result = ( {searchedKeyword} ) => {
                                     <td>{index+1}</td>
                                     <td>{item.title}</td>
                                     <td>{item.wordcount}</td>
-                                    <td>{item.wordcount/200}</td>
+                                    <td>{(item.wordcount/200).toFixed(1)}</td>
                                     <td><a href={`https://en.wikipedia.org/?curid=${item.pageid}`}>Visit Page!</a></td>
                                     <td><LoadPhoto pageidToPhoto={item.title} /></td>
                                 </tr>
