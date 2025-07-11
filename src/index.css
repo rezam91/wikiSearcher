@@ -1,6 +1,32 @@
 * {
   box-sizing: border-box;
 }
+.mag-logo {
+  display: block;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: magAnimation 2s ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes magAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(30px);
+    opacity: 1;
+  }
+  67% {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translatex(0);
+  }
+}
 body {
   margin: 0;
   font-family: Ubuntu;
